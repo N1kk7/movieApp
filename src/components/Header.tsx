@@ -40,7 +40,7 @@ const inputLength: any = (Event: any) => {
                   <div className="input relative top-4">
                     <input className=' bg-transparent border-white outline-none text-white border-b border-solid' type="text" value={valueInput}  onChange={(event) => inputLength(event)}/>
                   </div>
-                  { activeBtn && <Link to={`Find/${valueInput}`}><div className="search cursor-pointer" onClick={(valueInput) => {setValueInput(''); setActiveBtn(false)}}>
+                  { activeBtn && <Link to={`movieApp/build/Find/${valueInput}`}><div className="search cursor-pointer" onClick={(valueInput) => {setValueInput(''); setActiveBtn(false)}}>
 
                     <img  className='w-12' src="/search_btn.png" alt=""/>
                   </div></Link>}
