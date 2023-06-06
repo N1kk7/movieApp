@@ -56,23 +56,23 @@ const inputLength: any = (Event: any) => {
                 <div className="list-header inline-block absolute right-0">
                   <ul className=''>
                         <li className='inline-block p-3 text-lime-50 pr-6'>
-                          <Link to={'/'}> Home </Link></li>
+                          <Link to={'/build'}> Home </Link></li>
                         <li className='inline-block p-3 text-lime-50 pr-6'>
-                          <Link to={'/Films'}> Films </Link>
+                          <Link to={'/build/Films'}> Films </Link>
                         </li>
                         <li className='inline-block p-3 text-lime-50 pr-6'>
-                          <Link to={'/Actors'}> Actors </Link>
+                          <Link to={'/build/Actors'}> Actors </Link>
                         </li>
                     </ul>
                 </div>
               </div>
           </div>
           <Routes>
-            <Route path="/" element={<Home />}/>
-            <Route path="/Films" element={<Films />}/>
-            <Route path="/Film/:id" element={<Film />}/>
-            <Route path="/Find/:valueInput" element={<Find key={valueInput}/>}/>
-            <Route path="/Actors" element={<Actors />}/>
+            <Route path="/build" element={<Home />}/>
+            <Route path="/build/Films" element={<Films />}/>
+            <Route path="/build/Film/:id" element={<Film />}/>
+            <Route path="/build/Find/:valueInput" element={<Find key={valueInput}/>}/>
+            <Route path="/build/Actors" element={<Actors />}/>
           </Routes> 
     </div>
   </Router>
