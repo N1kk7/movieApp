@@ -43,15 +43,15 @@ const inputLength: any = (Event: any) => {
                         </div>
                         { activeBtn && <Link to={`movieApp/build/Find/${valueInput}`}><div className="search cursor-pointer" onClick={(valueInput) => {setValueInput(''); setActiveBtn(false)}}>
 
-                          <img  className='w-12' src="/search_btn.png" alt=""/>
+                          <img  className='w-12' src="search_btn.png" alt=""/>
                         </div></Link>}
                         { !activeBtn && <div className="search ">
-                          <img  className='w-12' src="/search_btn.png" alt=""/>
+                          <img  className='w-12' src="search_btn.png" alt=""/>
                         </div>}
                       </div>
                       <div className="logo-item inline-block">
                         <span className='text-white pr-5'>TV</span>
-                        <img src="/main-logo.png" alt="" className="w-12 inline-block text-center" />
+                        <img src="main-logo.png" alt="" className="w-12 inline-block text-center" />
                         <span className="text-white pl-5">Maze</span>
                       </div>
                       <div className="list-header inline-block absolute right-0">

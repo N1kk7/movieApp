@@ -159,7 +159,7 @@ fetchEpisode()
     <>
       {error && <div className='error w-screen h-screen absolute top-0 bg-red-600 opacity-80'>
           <div className='img pt-60'>
-            <img className='relative w-60 mx-auto' src="/sad-face.png" alt="" />
+            <img className='relative w-60 mx-auto' src="sad-face.png" alt="" />
           </div>
           <div className="text text-center text-xl pt-12">
             <span className='text-white '>Something went wrong</span>
@@ -194,7 +194,7 @@ fetchEpisode()
                   <span>{`Rate ${rate}`}</span>
             </div>
             <div className="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between">
-              {rateArr.map((e: number) => <img className='w-6' src="/star.png" alt="" key={e}/>)}
+              {rateArr.map((e: number) => <img className='w-6' src="star.png" alt="" key={e}/>)}
             </div>
           </div>
           
