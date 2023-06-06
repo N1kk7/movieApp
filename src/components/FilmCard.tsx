@@ -16,7 +16,7 @@ const genres = `${film.genres}' '`;
         className="my-8 rounded shadow-lg shadow-gray-200 dark:shadow-gray-900 bg-white dark:bg-gray-800 duration-300 hover:-translate-y-1"
         >
             {/* <!-- Clickable Area --> */}
-            <Link to={`movieApp/build/Film/${film.id}`}><div className="cursor-pointer">
+            <Link to={`/movieApp/build/Film/${film.id}`}><div className="cursor-pointer">
                 <figure>
                     {/* <!-- Image --> */}
                     <img className='mx-auto' src={film.image.medium} />
