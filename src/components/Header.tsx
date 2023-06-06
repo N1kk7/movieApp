@@ -32,50 +32,52 @@ const inputLength: any = (Event: any) => {
 }
 
   return (
-    <Router>
-    <div>
-          <div  className='text-center pl-5 pt-3 h-20 bg-gradient-to-r from-custom-dark-blue to-gray-800 border-b fixed min-w-full z-10'>
-              <div className="header-item">
-                <div className="search-block flex justify-between w-1/5 absolute top-4">
-                  <div className="input relative top-4">
-                    <input className=' bg-transparent border-white outline-none text-white border-b border-solid' type="text" value={valueInput}  onChange={(event) => inputLength(event)}/>
-                  </div>
-                  { activeBtn && <Link to={`movieApp/build/Find/${valueInput}`}><div className="search cursor-pointer" onClick={(valueInput) => {setValueInput(''); setActiveBtn(false)}}>
+    <>
+      <Router>
+          <div>
+                <div  className='text-center pl-5 pt-3 h-20 bg-gradient-to-r from-custom-dark-blue to-gray-800 border-b fixed min-w-full z-10'>
+                    <div className="header-item">
+                      <div className="search-block flex justify-between w-1/5 absolute top-4">
+                        <div className="input relative top-4">
+                          <input className=' bg-transparent border-white outline-none text-white border-b border-solid' type="text" value={valueInput}  onChange={(event) => inputLength(event)}/>
+                        </div>
+                        { activeBtn && <Link to={`movieApp/build/Find/${valueInput}`}><div className="search cursor-pointer" onClick={(valueInput) => {setValueInput(''); setActiveBtn(false)}}>
 
-                    <img  className='w-12' src="/search_btn.png" alt=""/>
-                  </div></Link>}
-                  { !activeBtn && <div className="search ">
-                    <img  className='w-12' src="/search_btn.png" alt=""/>
-                  </div>}
+                          <img  className='w-12' src="/search_btn.png" alt=""/>
+                        </div></Link>}
+                        { !activeBtn && <div className="search ">
+                          <img  className='w-12' src="/search_btn.png" alt=""/>
+                        </div>}
+                      </div>
+                      <div className="logo-item inline-block">
+                        <span className='text-white pr-5'>TV</span>
+                        <img src="/main-logo.png" alt="" className="w-12 inline-block text-center" />
+                        <span className="text-white pl-5">Maze</span>
+                      </div>
+                      <div className="list-header inline-block absolute right-0">
+                        <ul className=''>
+                              <li className='inline-block p-3 text-lime-50 pr-6'>
+                                <Link to={'movieApp/build/'}> Home </Link></li>
+                              <li className='inline-block p-3 text-lime-50 pr-6'>
+                                <Link to={'movieApp/build/Films/'}> Films </Link>
+                              </li>
+                              <li className='inline-block p-3 text-lime-50 pr-6'>
+                                <Link to={'movieApp/build/Actors/'}> Actors </Link>
+                              </li>
+                          </ul>
+                      </div>
+                    </div>
                 </div>
-                <div className="logo-item inline-block">
-                  <span className='text-white pr-5'>TV</span>
-                  <img src="/main-logo.png" alt="" className="w-12 inline-block text-center" />
-                  <span className="text-white pl-5">Maze</span>
-                </div>
-                <div className="list-header inline-block absolute right-0">
-                  <ul className=''>
-                        <li className='inline-block p-3 text-lime-50 pr-6'>
-                          <Link to={'movieApp/build/'}> Home </Link></li>
-                        <li className='inline-block p-3 text-lime-50 pr-6'>
-                          <Link to={'movieApp/build/Films/'}> Films </Link>
-                        </li>
-                        <li className='inline-block p-3 text-lime-50 pr-6'>
-                          <Link to={'movieApp/build/Actors/'}> Actors </Link>
-                        </li>
-                    </ul>
-                </div>
-              </div>
+                <Routes>
+                  <Route path="movieApp/build/" element={<Home />}/>
+                  <Route path="movieApp/build/Films/" element={<Films />}/>
+                  <Route path="movieApp/build/Film/:id" element={<Film />}/>
+                  <Route path="movieApp/build/Find/:valueInput" element={<Find key={valueInput}/>}/>
+                  <Route path="movieApp/build/Actors/" element={<Actors />}/>
+                </Routes> 
           </div>
-          <Routes>
-            <Route path="movieApp/build/" element={<Home />}/>
-            <Route path="movieApp/build/Films/" element={<Films />}/>
-            <Route path="movieApp/build/Film/:id" element={<Film />}/>
-            <Route path="movieApp/build/Find/:valueInput" element={<Find key={valueInput}/>}/>
-            <Route path="movieApp/build/Actors/" element={<Actors />}/>
-          </Routes> 
-    </div>
-  </Router>
+        </Router>
+    </>
   )
 }
 
