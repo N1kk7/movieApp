@@ -25,6 +25,7 @@ export default function Home() {
           
           topFilms.push(elem)
         }  
+        return elem;
       })
       setFilms(topFilms)
       
@@ -32,6 +33,7 @@ export default function Home() {
 
   useEffect(() => {
     fetchMovies()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   return (

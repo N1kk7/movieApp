@@ -64,6 +64,7 @@ export default function Film() {
 
   useEffect(() => {
     fetchFilm()    
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
 const getActors = () => {
@@ -115,6 +116,7 @@ const getEpisodes= () => {
         numSeason = e.season
         episodeArray.push(e)
       }
+      return e;
     })
 
     setListEpisodes(episodesArray);

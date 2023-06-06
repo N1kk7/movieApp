@@ -19,7 +19,7 @@ const genres = `${film.genres}' '`;
             <Link to={`/movieApp/build/Film/${film.id}`}><div className="cursor-pointer">
                 <figure>
                     {/* <!-- Image --> */}
-                    <img className='mx-auto' src={film.image.medium} />
+                    <img className='mx-auto' src={film.image.medium} alt=''/>
                     <figcaption className="p-4">
                         {/* <!-- Title --> */}
                         <p

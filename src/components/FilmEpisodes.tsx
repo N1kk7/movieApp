@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import { regex } from '../constants/constants'
 import { IEpisodes } from '../models/episodesModel'
 

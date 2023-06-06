@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { IActor } from '../models/actorModel'
 
 interface actorProps {
@@ -17,7 +16,7 @@ export default function ActorsCard({ actor }: actorProps) {
            {/* <Link to={`/actor/${actor.id}`}><div className="cursor-pointer"> */}
                <figure>
                    {/* <!-- Image --> */}
-                   <img className='mx-auto' src={actor.image?.medium || "Image not exist yet"} />
+                   <img className='mx-auto' src={actor.image?.medium || "Image not exist yet"} alt=''/>
 
                    <figcaption className="p-4">
                        {/* <!-- Title --> */}
