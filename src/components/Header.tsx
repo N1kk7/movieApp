@@ -68,11 +68,11 @@ const inputLength: any = (Event: any) => {
               </div>
           </div>
           <Routes>
-            <Route path="movieApp/build" element={<Home />}/>
-            <Route path="movieApp/build/Films" element={<Films />}/>
+            <Route path="movieApp/build/" element={<Home />}/>
+            <Route path="movieApp/build/Films/" element={<Films />}/>
             <Route path="movieApp/build/Film/:id" element={<Film />}/>
             <Route path="movieApp/build/Find/:valueInput" element={<Find key={valueInput}/>}/>
-            <Route path="movieApp/build/Actors" element={<Actors />}/>
+            <Route path="movieApp/build/Actors/" element={<Actors />}/>
           </Routes> 
     </div>
   </Router>
