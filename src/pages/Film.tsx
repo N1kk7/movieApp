@@ -51,6 +51,7 @@ export default function Film() {
           }  
           numArray(rate)
           setRateArr(array)
+          // console.log(array);
       }
       rateArray(rating)
       setStatus(getStatus)
@@ -161,7 +162,7 @@ fetchEpisode()
                   <span>{`Rate ${rate}`}</span>
                 </div>
                 <div className="mt-2 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between">
-                  {rateArr.map((e: number) => <img className='w-6' src="star.png" alt="" key={e}/>)}
+                  {rateArr.map((e: number) => <img className='w-6' src="../star.png" alt="" key={e}/>)}
                 </div>
               </div>
             </div>
