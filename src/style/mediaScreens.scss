@@ -1,0 +1,120 @@
+@media screen and (max-width: 1024px) {
+    // .mobileTittleImg{
+    //     img{
+    //         width: 12rem;
+    //         height: 12rem;
+    //         position: absolute;
+    //         z-index: 32;
+    //         display: block;
+    //         border-radius: 50%;
+    //         margin-top: 3cqh;
+    //     }
+    // }
+    .slideItem{
+        flex-direction: column;
+        text-align: -webkit-center;
+        text-align: inherit;
+        width: 65cqw;
+        .poster{
+            img{
+                margin: 0 auto;
+                width: 25cqw;
+
+            }
+        }
+        .infoPoster{
+            width: auto;
+            .tittle{
+                letter-spacing: normal;
+                font-size: 3cqw;
+            }
+            .description{
+                font-size: 2cqw;
+            }
+        }
+        .readMoreBtn{
+            top: 5cqh;
+            width: 100%;
+            position: relative;
+        }
+
+    }
+    .filmBg{
+        padding-top: 110px;
+    }
+    .filmWrapper{
+        position: relative;
+        padding: min(160px) 0 100px;
+        padding-top: unset;
+    }
+    .actorContainer{
+        width: 70cqw;
+        .actorDescription{
+            padding: 2cqw;
+        }
+    }
+    .seasons{
+        .seasonsWrapper{
+            min-width: unset;
+            .description{
+                width: 50cqw;
+                padding: 5cqw;
+            }
+        }
+
+    }
+    .episodesWrapper{
+        width: 90vw;
+    }
+}
+@media screen and (max-width: 768px) {
+    .actorContainer{
+        .gridBlock{
+            grid-template-columns: 35cqw 35cqw;
+        }
+        // width: 35cqw;
+        img{
+            width: 30cqw;
+            height: 25cqh;
+            margin: 0 auto;
+        }
+    }
+    .actorDescription{
+        text-align: center;
+    }
+    
+}
+@media screen and (max-width: 710px) {
+    .episodeBtn{
+        display: none;
+    }
+    .episodesWrapper{
+        display: none;
+    }
+    .filmWrapper{
+        button{
+            margin: 0 2cqw;
+        }
+    }
+    
+}
+@media screen and (max-width: 450px) {
+    .seasonsWrapper{
+        // max-width: unset;
+        // .description{
+        //     width: 50cqw;
+        //     padding: 5cqw;
+        // }
+        .img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                min-width: unset;
+                width: 50cqw;
+
+            }
+        }
+    }
+}
+

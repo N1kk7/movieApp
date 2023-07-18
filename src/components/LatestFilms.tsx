@@ -16,11 +16,11 @@ export default function LatestFilms ({films}: filmProps) {
 
   return (
     <>
-          <div className="slideItem flex justify-between relative my-8">
-            <div className="poster relative left-10">
+          <div className="slideItem flex justify-around relative my-8">
+            <div className="poster relative ">
               <img src={films.image.medium} alt="" className='w-96'/>
             </div>
-            <div className="infoPoster w-2/5 relative right-32 h-60 top-8">
+            <div className="infoPoster w-2/5 relative h-60 top-8">
               <div className="tittle text-white text-2xl font-bold tracking-custom-l-s">
                 <span>{films.name}</span>
               </div>

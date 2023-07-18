@@ -130,16 +130,20 @@ fetchEpisode()
 
   return (
     <>
-        <div className="filmBg bg-gradient-to-r from-custom-dark-blue to-gray-800 h-auto min-h-screen pt-32">
+        <div className="filmBg bg-gradient-to-r from-custom-dark-blue to-gray-800 h-auto min-h-screen flex justify-center items-center pt-24">
 
-            <div className="max-w-4xl flex items-center max-h-fit flex-wrap mx-auto my-32 lg:my-0 ">
+            <div className="filmWrapper max-w-4xl flex items-center justify-center max-h-fit flex-wrap mx-auto  lg:my-0 ">
 
                   {/* Main Col */}
                   <div id="profile" className="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-6 lg:mx-0">
             
               <div className="p-4 md:p-12 text-center lg:text-left">
                 {/* Image for mobile view */}
-                <div className="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center "></div>
+                <div className="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center ">
+                  <img src={poster || 'Not Found'} alt="" className="w-48 h-48 absolute block rounded-full mt-2"/>
+
+
+                </div>
                 
                 <h1 className="text-3xl font-bold pt-8 lg:pt-0">{showName}</h1>
                 <div className="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
@@ -151,7 +155,7 @@ fetchEpisode()
                   <button className="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full" onClick={() => getActors()}>
                     ACTORS
                   </button>
-                  <button className="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full mx-5" onClick={() => getEpisodes()}>
+                  <button className="episodeBtn bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full mx-5" onClick={() => getEpisodes()}>
                     EPISODES
                   </button> 
                   <button className="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full" onClick={() => getSeasons()}>
@@ -173,8 +177,8 @@ fetchEpisode()
             </div>
             {/* ACTORS BLOCK */}
               { actors && <div className="bg-gradient-to-r from-custom-dark-blue to-gray-800">
-                            <div className="container pb-6 py-10 mx-auto">
-                              <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                            <div className="actorContainer pb-6 py-10 mx-auto">
+                              <div className="gridBlock grid grid-cols-1 gap-8 md:grid-cols-2">
                                 {listActors.map((actor: IPerson) => <FilmActors actors={actor} key={actor.character.id}/>)}
                               </div>
                             </div>

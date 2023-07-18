@@ -11,7 +11,7 @@ export default function FilmActors({actors}: actorProps) {
     <div className="lg:flex border border-white rounded-3xl" >
         <img className="object-cover w-full h-56 rounded-3xl lg:w-64 p-3" src={actors.person.image?.medium}alt="" />
 
-        <div className="flex flex-col justify-between py-6 lg:mx-6">
+        <div className="actorDescription flex flex-col justify-between py-6 lg:mx-6">
             <span className="text-xl font-semibold text-white hover:underline dark:text-white ">
                 {actors.person.name}
             </span>
