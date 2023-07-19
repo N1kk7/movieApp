@@ -10,6 +10,7 @@ import { IFind } from '../models/findModel';
 import { IPerson } from '../models/personModel';
 import { ISeasons } from '../models/seasonModel';
 import sadFace from '../img/sad-face.png'
+import star from '../img/star.png'
 
 export default function Find() {
   const params = useParams()
@@ -197,7 +198,7 @@ fetchEpisode()
                   <span>{`Rate ${rate}`}</span>
             </div>
             <div className="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between">
-              {rateArr.map((e: number) => <img className='w-6' src="../star.png" alt="" key={e}/>)}
+              {rateArr.map((e: number) => <img className='w-6' src={star} alt="" key={e}/>)}
             </div>
           </div>
           

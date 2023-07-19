@@ -1,4 +1,5 @@
 @media screen and (max-width: 1024px) {
+
   .search-block{
     .search{
         display: flex;
@@ -106,14 +107,30 @@
         justify-content: flex-start;
         align-items: center;
     }
+    .burger{
+        display: block !important;
+        position: absolute;
+        top: 15px;
+        right: 5cqw;
+        img{
+            width: 45px;
+            background-color: white;
+            padding: 1cqw;
+            border-radius: 2cqw;
+        }
+    }
     .pages{
         width: 40cqw;
         height: 40cqh;
         background-color: black;
         display: flex;
         justify-content: flex-start;
+        transition: all ease 0.5s;
         align-items: center;
         min-height: 230px;
+        position: relative;
+        left: 40cqw;
+        top: 20px;
         ul{
             .burger-search{
                 display: block;
@@ -121,15 +138,18 @@
                 width: 40cqw;
                 text-align: left;
                 .input{
-                    top: 30px;
+                    top: 20px;
+
                     input{
+                        padding-left: 2cqw;
+                        padding-bottom: 5px;
                         width: 40cqw;
                     }
                 }
                 .search{
-                    position: fixed;
-                    top: 60px;
-                    right: 1cqh;
+                    position: absolute;
+                    right: 2cqh;
+                    top: 20px;
                     text-align: -webkit-right;
                     // img{
                     //     position: fixed;
@@ -146,6 +166,10 @@
                 
             }
         }
+    }
+    .pagesActive{
+        transition: all ease 0.5s;
+        left: 0;
     }
     .episodeBtn{
         display: none;

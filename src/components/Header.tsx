@@ -14,14 +14,17 @@ import Film from '../pages/Film';
 import search from '../img/search_btn.png'
 import logo from '../img/main-logo.png'
 import burger from '../img/burger.png'
+import closeBtn from '../img/close.png'
 
 
 
 
 
 export default function Header() {
-  const [activeBtn, setActiveBtn] = useState(false)
-  const [valueInput, setValueInput] = useState('')
+  const [activeBtn, setActiveBtn] = useState(false);
+  const [valueInput, setValueInput] = useState('');
+  const [stateBurger, setStateBurger] = useState(false);
+  const [pagesClass, setPagesClass] = useState<string>('');
 
 const inputLength: any = (Event: any) => {
   const value = Event.target.value
@@ -37,22 +40,29 @@ const inputLength: any = (Event: any) => {
   }
 }
 
+const burgerBar = () => {
+  setStateBurger(!stateBurger);
+  !stateBurger ? setPagesClass('pagesActive'): setPagesClass('');
+  console.log(stateBurger)
+
+}
+
   return (
     <>
       <Router>
           <div>
                 <div  className='text-center pl-5 pt-3 h-20 bg-gradient-to-r from-custom-dark-blue to-gray-800 border-b fixed min-w-full z-10'>
                     <div className="header-item">
-                      <div className="search-block flex justify-between w-1/5 absolute top-4">
+                      <div className="search-block flex justify-evenly w-1/5 absolute top-4">
                         <div className="input relative top-4">
                           <input className=' bg-transparent border-white outline-none text-white border-b border-solid' type="text" value={valueInput}  onChange={(event) => inputLength(event)}/>
                         </div>
                         { activeBtn && <Link to={`movieApp/build/Find/${valueInput}`}><div className="search cursor-pointer" onClick={(valueInput) => {setValueInput(''); setActiveBtn(false)}}>
 
-                          <img  src={search} alt=""/>
+                          <img  src={search} alt="" className='w-10'/>
                         </div></Link>}
                         { !activeBtn && <div className="search ">
-                          <img  src={search} alt=""/>
+                          <img  src={search} alt="" className='w-10'/>
                         </div>}
                       </div>
                       <div className="logo-item inline-block">
@@ -60,17 +70,20 @@ const inputLength: any = (Event: any) => {
                         <img src={logo} alt="" className="w-12 inline-block text-center" />
                         <span className="text-white pl-5">Maze</span>
                       </div>
-                      <div className="list-header inline-block absolute right-0">
-                        <div className="burger">
-                          <img src={burger} alt="" className='hidden'/>
+                      <div className="burger hidden" onClick={() => burgerBar()}>
+                          {!stateBurger && <img src={burger} alt="" />}
+                          {stateBurger && <img src={closeBtn} alt="" />}
+
                         </div>
-                        <div className="pages">
+                      <div className="list-header inline-block absolute right-0">
+                        
+                        <div className={`pages ${pagesClass}`}>
                           <ul className=''>
                                 <li className='burger-search hidden'>
                                 <div className="input relative top-4 inline-block">
                                   <input className=' bg-transparent border-white outline-none text-white border-b border-solid' type="text" value={valueInput}  onChange={(event) => inputLength(event)}/>
                                 </div>
-                                { activeBtn && <Link to={`movieApp/build/Find/${valueInput}`}><div className="search cursor-pointer inline-block" onClick={(valueInput) => {setValueInput(''); setActiveBtn(false)}}>
+                                { activeBtn && <Link to={`movieApp/build/Find/${valueInput}`}><div className="search cursor-pointer inline-block" onClick={(valueInput) => {setValueInput(''); setActiveBtn(false); burgerBar()}}>
 
                                   <img  className='w-12 ' src={search} alt=""/>
                                 </div></Link>}
@@ -80,12 +93,12 @@ const inputLength: any = (Event: any) => {
                                 
                                 </li>
                                 <li className='inline-block p-3 text-lime-50 pr-6'>
-                                  <Link to={'movieApp/build/'}> Home </Link></li>
+                                  <Link to={'movieApp/build/'} onClick={() => burgerBar()}> Home </Link></li>
                                 <li className='inline-block p-3 text-lime-50 pr-6'>
-                                  <Link to={'movieApp/build/Films/'}> Films </Link>
+                                  <Link to={'movieApp/build/Films/'} onClick={() => burgerBar()}> Films </Link>
                                 </li>
                                 <li className='inline-block p-3 text-lime-50 pr-6'>
-                                  <Link to={'movieApp/build/Actors/'}> Actors </Link>
+                                  <Link to={'movieApp/build/Actors/'} onClick={() => burgerBar()}> Actors </Link>
                                 </li>
                             </ul>
                         </div>
