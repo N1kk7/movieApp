@@ -55,16 +55,34 @@ const inputLength: any = (Event: any) => {
                         <span className="text-white pl-5">Maze</span>
                       </div>
                       <div className="list-header inline-block absolute right-0">
-                        <ul className=''>
-                              <li className='inline-block p-3 text-lime-50 pr-6'>
-                                <Link to={'movieApp/build/'}> Home </Link></li>
-                              <li className='inline-block p-3 text-lime-50 pr-6'>
-                                <Link to={'movieApp/build/Films/'}> Films </Link>
-                              </li>
-                              <li className='inline-block p-3 text-lime-50 pr-6'>
-                                <Link to={'movieApp/build/Actors/'}> Actors </Link>
-                              </li>
-                          </ul>
+                        <div className="burger">
+                          <img src="./burger.png" alt="" className='hidden'/>
+                        </div>
+                        <div className="pages">
+                          <ul className=''>
+                                <li className='burger-search'>
+                                <div className="input relative top-4 inline-block">
+                                  <input className=' bg-transparent border-white outline-none text-white border-b border-solid' type="text" value={valueInput}  onChange={(event) => inputLength(event)}/>
+                                </div>
+                                { activeBtn && <Link to={`movieApp/build/Find/${valueInput}`}><div className="search cursor-pointer inline-block" onClick={(valueInput) => {setValueInput(''); setActiveBtn(false)}}>
+
+                                  <img  className='w-12 ' src="search_btn.png" alt=""/>
+                                </div></Link>}
+                                { !activeBtn && <div className="search inline-block">
+                                  <img  className='w-12 ' src="search_btn.png" alt=""/>
+                                </div>}
+                                
+                                </li>
+                                <li className='inline-block p-3 text-lime-50 pr-6'>
+                                  <Link to={'movieApp/build/'}> Home </Link></li>
+                                <li className='inline-block p-3 text-lime-50 pr-6'>
+                                  <Link to={'movieApp/build/Films/'}> Films </Link>
+                                </li>
+                                <li className='inline-block p-3 text-lime-50 pr-6'>
+                                  <Link to={'movieApp/build/Actors/'}> Actors </Link>
+                                </li>
+                            </ul>
+                        </div>
                       </div>
                     </div>
                 </div>
