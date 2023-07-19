@@ -11,6 +11,12 @@ import Films from '../pages/Films';
 import Actors from '../pages/Actors';
 import Find from '../pages/Find';
 import Film from '../pages/Film';
+import search from '../img/search_btn.png'
+import logo from '../img/main-logo.png'
+import burger from '../img/burger.png'
+
+
+
 
 
 export default function Header() {
@@ -43,33 +49,33 @@ const inputLength: any = (Event: any) => {
                         </div>
                         { activeBtn && <Link to={`movieApp/build/Find/${valueInput}`}><div className="search cursor-pointer" onClick={(valueInput) => {setValueInput(''); setActiveBtn(false)}}>
 
-                          <img  className='w-12' src="search_btn.png" alt=""/>
+                          <img  src={search} alt=""/>
                         </div></Link>}
                         { !activeBtn && <div className="search ">
-                          <img  className='w-12' src="search_btn.png" alt=""/>
+                          <img  src={search} alt=""/>
                         </div>}
                       </div>
                       <div className="logo-item inline-block">
                         <span className='text-white pr-5'>TV</span>
-                        <img src="main-logo.png" alt="" className="w-12 inline-block text-center" />
+                        <img src={logo} alt="" className="w-12 inline-block text-center" />
                         <span className="text-white pl-5">Maze</span>
                       </div>
                       <div className="list-header inline-block absolute right-0">
                         <div className="burger">
-                          <img src="./burger.png" alt="" className='hidden'/>
+                          <img src={burger} alt="" className='hidden'/>
                         </div>
                         <div className="pages">
                           <ul className=''>
-                                <li className='burger-search'>
+                                <li className='burger-search hidden'>
                                 <div className="input relative top-4 inline-block">
                                   <input className=' bg-transparent border-white outline-none text-white border-b border-solid' type="text" value={valueInput}  onChange={(event) => inputLength(event)}/>
                                 </div>
                                 { activeBtn && <Link to={`movieApp/build/Find/${valueInput}`}><div className="search cursor-pointer inline-block" onClick={(valueInput) => {setValueInput(''); setActiveBtn(false)}}>
 
-                                  <img  className='w-12 ' src="search_btn.png" alt=""/>
+                                  <img  className='w-12 ' src={search} alt=""/>
                                 </div></Link>}
                                 { !activeBtn && <div className="search inline-block">
-                                  <img  className='w-12 ' src="search_btn.png" alt=""/>
+                                  <img  className='w-12 ' src={search} alt=""/>
                                 </div>}
                                 
                                 </li>

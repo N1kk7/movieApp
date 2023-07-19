@@ -9,6 +9,7 @@ import { API_URL, regex, SEARCH_URL } from '../constants/constants';
 import { IFind } from '../models/findModel';
 import { IPerson } from '../models/personModel';
 import { ISeasons } from '../models/seasonModel';
+import sadFace from '../img/sad-face.png'
 
 export default function Find() {
   const params = useParams()
@@ -161,7 +162,7 @@ fetchEpisode()
     <>
       {error && <div className='error w-screen h-screen absolute top-0 bg-red-600 opacity-80'>
           <div className='img pt-60'>
-            <img className='relative w-60 mx-auto' src="sad-face.png" alt="" />
+            <img className='relative w-60 mx-auto' src={sadFace} alt="" />
           </div>
           <div className="text text-center text-xl pt-12">
             <span className='text-white '>Something went wrong</span>

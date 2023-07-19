@@ -103,7 +103,7 @@
     }
     .logo-item{
         display: flex;
-        justify-content: start;
+        justify-content: flex-start;
         align-items: center;
     }
     .pages{
@@ -116,6 +116,7 @@
         min-height: 230px;
         ul{
             .burger-search{
+                display: block;
                 border-bottom: 0;
                 width: 40cqw;
                 text-align: left;

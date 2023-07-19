@@ -1,13 +1,16 @@
 {
   "files": {
-    "main.css": "https://n1kk7.github.io/movieApp/build/static/css/main.18de72c6.css",
-    "main.js": "https://n1kk7.github.io/movieApp/build/static/js/main.09f53b5e.js",
+    "main.css": "https://n1kk7.github.io/movieApp/build/static/css/main.98e63887.css",
+    "main.js": "https://n1kk7.github.io/movieApp/build/static/js/main.80dec70e.js",
+    "static/media/main-logo.png": "https://n1kk7.github.io/movieApp/build/static/media/main-logo.fbee1dd66bdb211709bf.png",
+    "static/media/search_btn.png": "https://n1kk7.github.io/movieApp/build/static/media/search_btn.982541361d450321eb11.png",
+    "static/media/sad-face.png": "https://n1kk7.github.io/movieApp/build/static/media/sad-face.6c96b2283321ec945ef5.png",
     "index.html": "https://n1kk7.github.io/movieApp/build/index.html",
-    "main.18de72c6.css.map": "https://n1kk7.github.io/movieApp/build/static/css/main.18de72c6.css.map",
-    "main.09f53b5e.js.map": "https://n1kk7.github.io/movieApp/build/static/js/main.09f53b5e.js.map"
+    "main.98e63887.css.map": "https://n1kk7.github.io/movieApp/build/static/css/main.98e63887.css.map",
+    "main.80dec70e.js.map": "https://n1kk7.github.io/movieApp/build/static/js/main.80dec70e.js.map"
   },
   "entrypoints": [
-    "static/css/main.18de72c6.css",
-    "static/js/main.09f53b5e.js"
+    "static/css/main.98e63887.css",
+    "static/js/main.80dec70e.js"
   ]
 }
