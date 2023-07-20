@@ -47,7 +47,7 @@ export default function Home() {
               navigation={false}
               pagination={true}
               mousewheel={true}
-              autoplay={{ delay: 3000 }}
+              // autoplay={{ delay: 3000 }}
               keyboard={true}
               modules={[Navigation, Pagination, Mousewheel, Keyboard]}
               className="mySwiper h-full"

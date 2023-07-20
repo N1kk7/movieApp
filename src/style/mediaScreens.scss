@@ -13,33 +13,54 @@
     }
   }
     .slideItem{
-        flex-direction: column;
-        text-align: -webkit-center;
+        // flex-direction: column;
         text-align: inherit;
-        width: 65cqw;
+        width: 80cqw;
+        height: 70cqh;
+        // margin-top: 75px;
+        height: inherit;
+        overflow: hidden;
+        top: 2cqh;
         .poster{
+            display: flex;
+            align-items: center;
+            width: 40cqw;
             img{
-                margin: 0 auto;
-                width: 25cqw;
+                // margin: 0 auto;
+                width: 40cqw;
+                max-width: 40cqh;
+                height: fit-content;
 
             }
         }
         .infoPoster{
-            width: auto;
+            width: 35cqw;
             .tittle{
                 letter-spacing: normal;
                 font-size: 3cqw;
             }
             .description{
-                font-size: 2cqw;
+                font-size: 2cqh;
+                overflow: auto;
+                margin-bottom: 12cqh;
+
+
+                max-height: 45cqh;
             }
         }
         .readMoreBtn{
             top: 5cqh;
             width: 100%;
             position: relative;
+            .btnWrapper{
+                display: block;
+                text-align: -webkit-right;
+            }
         }
 
+    }
+    .infoPoster{
+        height: inherit;
     }
     .filmBg{
         padding-top: 110px;
@@ -68,6 +89,9 @@
     .episodesWrapper{
         width: 90vw;
     }
+    .swiper-slide{
+        height: -webkit-fill-available;
+    }
 }
 @media screen and (max-width: 768px) {
     .search-block{
@@ -95,6 +119,17 @@
     }
     .actorDescription{
         text-align: center;
+    }
+    .readMoreBtn{
+        top: unset !important;
+        bottom: 6cqh;
+        // bottom: 8cqh !important;
+        // .mainBtn{
+        //     span{
+        //         font-size: 3cqw;
+        //     }
+        // }
+
     }
     
 }
@@ -182,6 +217,20 @@
             margin: 0 2cqw;
         }
     }
+    .slideItem{
+        .readMoreBtn{
+            top: unset;
+            position: absolute;
+            display: block;
+            bottom: 10cqh;
+            right: unset;
+            .mainBtn{
+                max-width: 30cqw;
+                margin: 0 auto;
+            }
+        }
+        
+    }
     
 }
 @media screen and (max-width: 450px) {
@@ -210,5 +259,34 @@
             }
         }
     }
+    .swiper-pagination{
+        display: none;
+    }
 }
+@media screen and (max-width: 425px) {
+    .burger{
+        img{
+            width: 35px;
+        }
+    }
+    .slideItem{
+        margin-top: 0;
+        .readMoreBtn{
+            bottom: 8cqh !important;
+            .mainBtn{
+                span{
+                    font-size: 3cqw;
+                }
+            }
+    
+        }
+
+    }
+    .gridBlock{
+        gap: 5px;
+    }
+    
+    
+}
+
 

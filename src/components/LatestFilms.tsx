@@ -28,9 +28,9 @@ export default function LatestFilms ({films}: filmProps) {
                 {description}
               </div>
               <div className="readMoreBtn absolute top-96 right-12">
-                <div className="w-full">
+                <div className="btnWrapper w-full">
                   <Link to={`Film/${films.id}`}><div
-                    className="flex text-gray-100 justify-center transition duration-200 ease-in-out transform px-4 py-2 w-48 border-b-4 border-gray-500 hover:border-b-2 bg-gradient-to-t from-gray-400  via-yellow-400 to-gray-200 rounded-2xl hover:translate-y-px "
+                    className=" mainBtn flex text-gray-100 justify-center transition duration-200 ease-in-out transform px-4 py-2 w-48 border-b-4 border-gray-500 hover:border-b-2 bg-gradient-to-t from-gray-400  via-yellow-400 to-gray-200 rounded-2xl hover:translate-y-px "
                   >
                           <span className="font-bold">
                     Read More</span>
@@ -38,6 +38,7 @@ export default function LatestFilms ({films}: filmProps) {
                 </div>
               </div>
             </div>
+            
         </div> 
     </>
   )
